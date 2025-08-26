@@ -1,6 +1,4 @@
-.card-gallery {
-    
-}
+
 
 .card {
     width: 200px;
@@ -10,4 +8,11 @@
     text-align: left;
     font-family: 'Anime Ace', 'Wild Words', sans-serif;
     font-size: small;
+}
+
+.imageOfCard {
+    width: 200px;
+    border:2px solid transparent;
+    padding: 10px;
+    
 }

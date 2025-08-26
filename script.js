@@ -1,6 +1,8 @@
 const cardInfo = document.getElementByClassName("card");
 
-const cardDetails = [{
+const cardDetails = [
+    {
+    id:  0,    
     "card name": "Tashigi (SP) - Legacy of the Master (OP12)",
     price: 95,
     "set name": "Legacy of the master",
@@ -12,9 +14,9 @@ const cardDetails = [{
     power: 2000,
     attribute: "Slash",
     "product details": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 'Navy' type card other than [Tashigi] and add it to your hand. Then, place the rest at the bottom of your deck in any order."
-
 },
 {
+    id:  1, 
     "card name": "Sanji (070) (Alternate Art) - Legacy of the Master (OP12)",
     price: 15,
     "set name": "Legacy of the master",
@@ -28,6 +30,7 @@ const cardDetails = [{
     "product details": "This Character gains +1000 power for every 5 Events in your trash. If this Character would be removed from the field by your opponent's effect, you may return 1 DON!! card from your field to your DON!! deck instead."
 },
 {
+    id:  2, 
     "card name": "Koala (086) (Alternate Art) - Legacy of the Master (OP12)",
     price: 15,
     "set name": "Legacy of the master",
@@ -41,6 +44,7 @@ const cardDetails = [{
     "product details": "[On Play] If your Leader has the 'Revolutionary Army' type, look at 3 cards from the top of your deck; reveal up to 1 'Revolutionary Army' type card other than [Koala] or up to 1 [Nico Robin] and add it to your hand. Then, trash the rest."
 },
 {
+    id:  3, 
     "card name": "Roronoa Zoro (113) - Legacy of the Master Release Event Cards (OP12 RE)",
     price: 5,
     "set name": "Legacy of the master",
@@ -57,7 +61,20 @@ const cardDetails = [{
 ];
 
 const getDetail = (id) => {
-    if (id === cardDetails[id]){
-        console.table(cardDetails[id]);
+    let cardFound = false;
+    for (let i = 0; i < cardDetails.length; i++) {
+        if(cardDetails[i].id === id){
+            const card = cardDetails[i];
+            const key = Object.keys(card);
+            for (let j = 0; j < keys.length; j++){
+                const key = keys[j];
+                console.log(key + " : " + card[key]);
+            }
+        }
+        cardFound = true;
+        break;
+    }
+    if (!cardFound){
+        console.log("card not found!!!");
     }
 }
