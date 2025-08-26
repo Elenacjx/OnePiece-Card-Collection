@@ -1,6 +1,13 @@
+.card-gallery {
+    
+}
+
 .card {
     width: 200px;
     border:2px dashed grey;
+    background-color: rgb(214, 236, 243);
     padding: 10px;
     text-align: left;
+    font-family: 'Anime Ace', 'Wild Words', sans-serif;
+    font-size: small;
 }
